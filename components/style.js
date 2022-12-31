@@ -71,15 +71,6 @@ const styles = StyleSheet.create({
         width: sc.width,
         fontSize: 12,
         fontWeight: 'bold',
-    },
-    createPost: {
-        borderRadius: 10,
-        width: sc.width / 1.1,
-        height: sc.height / 3,
-        borderColor: 'black',
-        borderWidth: 1,
-        padding: 5,
-        marginVertical: 6,
     }
 })
 export default styles;
