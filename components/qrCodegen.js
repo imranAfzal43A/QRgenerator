@@ -27,7 +27,10 @@ const QR = () => {
                 <View style={!themeNight ? styles.container : styles.containerN} >
                     <Input style={!themeNight ? styles.textinput : styles.textinputN} title='enter link' onChangeText={(value) => setUrl(value)} />
                     <MyDropdown open={open} value={value} items={items} setOpen={setOpen} setValue={setValue} setItems={setItems} />
-                    <Mybutton title='Generate QR' style={!themeNight ? styles.button : styles.buttonN} onPress={() => setShowqr(!showQr)} />
+                    <View style={{ flexDirection: 'row' }}>
+                        <Mybutton title='Generate QR' style={!themeNight ? styles.button : styles.buttonN} onPress={() => setShowqr(!showQr)} />
+                        <Mybutton title='Save QR' style={!themeNight ? styles.button : styles.buttonN} />
+                    </View>
                     {showQr && <QRCode value={url} size={value} />}
                 </View>
             </SafeAreaProvider>
